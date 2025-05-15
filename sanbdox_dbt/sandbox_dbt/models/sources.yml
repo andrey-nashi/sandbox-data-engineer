@@ -1,0 +1,11 @@
+version: 1
+
+sources:
+  - name: raw
+    schema: public
+    tables:
+      - name: customer
+      - name: employee
+      - name: engagement
+  - name: analytics
+    schema: demo
