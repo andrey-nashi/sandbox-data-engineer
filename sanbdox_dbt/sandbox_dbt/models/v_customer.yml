@@ -2,24 +2,13 @@ version: 2
 
 models:
   - name: v_customer
-    description: "Staged engagement data"
+    description: "View customer data"
     columns:
       - name: id
         description: "Primary key for engagement"
         tests:
           - unique
           - not_null
-
-      - name: customer_id
-        tests:
-          - not_null
           - relationships:
               to: ref('stg_customer')
-              field: id
-
-      - name: employee_id
-        tests:
-          - not_null
-          - relationships:
-              to: ref('stg_employee')
-              field: id
+              field: customer_id

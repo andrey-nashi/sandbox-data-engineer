@@ -49,6 +49,7 @@ INSERT INTO employee (name, department, email) VALUES
 ('Quinn Baker', 'Support', 'quinn.b@example.com'),
 ('Rachel Scott', 'Engineering', 'rachel.s@example.com'),
 ('Steve Adams', 'Marketing', 'steve.a@example.com'),
+('Tina Morris', 'Sales', 'tina.m@example.com'),
 ('Tina Morris', 'Sales', 'tina.m@example.com');
 
 -- Insert sample customers

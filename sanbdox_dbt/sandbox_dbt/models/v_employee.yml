@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: v_employee
+    description: "View employee data"
+    columns:
+      - name: id
+        description: "Primary key for employee"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Name of the employee"
+        tests:
+          - unique
+          - not_null

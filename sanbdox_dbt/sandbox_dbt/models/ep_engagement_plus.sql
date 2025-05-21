@@ -1,4 +1,4 @@
-{{config(materialized="view")}}
+{{config(materialized="ephemeral")}}
 
 with
 customer as (select * from {{source("raw", "customer")}}),
@@ -7,9 +7,9 @@ engagement as (select * from {{source("raw", "engagement")}})
 
 select
     g.id as engagement_id,
-    c.name as customer_name,
+    upper(c.name) as customer_name,
     c.email as customer_email,
-    e.name as employee_name,
+    upper(e.name) as employee_name,
     e.email as employee_email,
     g.date as engagement_date
 from engagement g
